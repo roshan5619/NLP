@@ -1,0 +1,92 @@
+{
+  "greeting": {
+    "patterns": [
+      "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
+      "what's up", "how are you", "howdy", "greetings"
+    ],
+    "responses": [
+      "Hello! How can I help you today?",
+      "Hi there! What can I do for you?",
+      "Greetings! How may I assist you?",
+      "Hello! I'm here to help. What do you need?"
+    ]
+  },
+  "goodbye": {
+    "patterns": [
+      "bye", "goodbye", "see you later", "farewell", "talk to you later",
+      "have a good day", "take care", "until next time"
+    ],
+    "responses": [
+      "Goodbye! Have a great day!",
+      "See you later! Take care!",
+      "Farewell! Don't hesitate to reach out if you need help.",
+      "Goodbye! It was nice talking with you."
+    ]
+  },
+  "order_status": {
+    "patterns": [
+      "where is my order", "order status", "track my order", "when will my order arrive",
+      "order tracking", "delivery status", "shipment status", "order update"
+    ],
+    "responses": [
+      "I can help you track your order. Please provide your order number.",
+      "To check your order status, I'll need your order number. Can you please share it?",
+      "I'd be happy to help you track your order. What's your order number?"
+    ]
+  },
+  "product_inquiry": {
+    "patterns": [
+      "tell me about this product", "product information", "product details",
+      "what does this product do", "product specifications", "features"
+    ],
+    "responses": [
+      "I'd be happy to help you learn more about our products. Which product are you interested in?",
+      "I can provide detailed product information. What specific product would you like to know about?",
+      "Sure! I can share product details with you. Which product catches your interest?"
+    ]
+  },
+  "complaint": {
+    "patterns": [
+      "I have a complaint", "I'm not satisfied", "this is terrible", "bad service",
+      "I want to complain", "poor quality", "disappointed", "not happy"
+    ],
+    "responses": [
+      "I'm sorry to hear about your experience. I'd like to help resolve this issue for you.",
+      "I apologize for any inconvenience. Let me assist you in addressing your concern.",
+      "I understand your frustration. I'm here to help make things right."
+    ]
+  },
+  "return_refund": {
+    "patterns": [
+      "return policy", "how to return", "refund", "exchange", "money back",
+      "return item", "refund policy", "return process"
+    ],
+    "responses": [
+      "I can help you with returns and refunds. Our return policy allows returns within 30 days of purchase.",
+      "For returns and refunds, you have 30 days from the purchase date. Would you like me to guide you through the process?",
+      "I'm here to help with your return. Please tell me more about the item you'd like to return."
+    ]
+  },
+  "technical_support": {
+    "patterns": [
+      "technical issue", "not working", "broken", "error", "problem",
+      "troubleshooting", "help with setup", "installation problem"
+    ],
+    "responses": [
+      "I'm here to help with technical issues. Can you describe the problem you're experiencing?",
+      "Let me assist you with that technical problem. What exactly is happening?",
+      "I can help troubleshoot the issue. Please provide more details about what's not working."
+    ]
+  },
+  "hours_location": {
+    "patterns": [
+      "store hours", "opening hours", "when are you open", "location",
+      "address", "where are you located", "contact information"
+    ],
+    "responses": [
+      "Our store hours are Monday-Friday 9 AM to 6 PM. We're located at 123 Main Street.",
+      "We're open Monday through Friday from 9 AM to 6 PM. You can find us at 123 Main Street.",
+      "Our business hours are 9 AM to 6 PM, Monday to Friday. We're at 123 Main Street."
+    ]
+  }
+}
