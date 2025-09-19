@@ -1,73 +1,66 @@
-# 🏨 Hotel Query Agent
+# Hotel Query Agent
 
-An interactive Streamlit application powered by **LangGraph** that lets you explore hotels from a structured dataset (`hotels.csv`).  
-Ask natural-language questions like:
+An LLM-powered agent that queries hotel data using LangGraph orchestration and Streamlit interface.
 
-- *“Top 5 hotels in Paris by cleanliness”*  
-- *“Show me hotels in Spain with at least 4 stars and high comfort ratings”*  
+## Setup Instructions
 
-The app will query the dataset, apply filters, and return results in a **tabular text summary**.
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
----
+2. **Set Environment Variable**
+   ```bash
+   export OPENAI_API_KEY="your-openai-api-key-here"
+   ```
+   
+   Or on Windows:
+   ```cmd
+   set OPENAI_API_KEY=your-openai-api-key-here
+   ```
 
-## ✨ Features
+3. **Prepare Dataset**
+   - Ensure `hotels.csv` is in the same directory as `app.py`
+   - The sample CSV provided includes all required columns
 
-- Loads `hotels.csv` once per session and normalizes columns for consistent filtering.  
-- Single **query tool** supporting:
-  - City and country filters (case-insensitive).  
-  - Minimum thresholds for star rating, cleanliness, comfort, and facilities.  
-  - Sorting by star rating, cleanliness, comfort, or facilities.  
-  - Clamped result limits `[1–10]`.  
-- LangGraph agent ensures the LLM always uses the tool when asked data-related questions.  
-- Streamlit chat UI with natural-language queries and conversational responses.  
-- Graceful handling of empty results with alternative query suggestions.
+4. **Run the Application**
+   ```bash
+   streamlit run app.py
+   ```
 
----
+## Features
 
-## 📂 Dataset Requirements
+- 🏨 **Hotel Search**: Query hotels by city, country, ratings, and amenities
+- 🔧 **LangGraph Integration**: Orchestrated agent workflow with tool use
+- 💬 **Chat Interface**: Natural language queries in a conversational format
+- 📊 **Structured Results**: Clear tabular display of hotel information
+- 🎯 **Smart Filtering**: Support for multiple criteria and sorting options
 
-The `hotels.csv` must contain the following columns:
+## Example Queries
 
-- `hotel id`  
-- `hotel name`  
-- `city`  
-- `country`  
-- `lat`  
-- `lon`  
-- `star rating`  
-- `cleanliness base`  
-- `comfort base`  
-- `facilities base`  
+- "Top 5 hotels in Paris by cleanliness"
+- "Hotels in Japan with at least 4 stars"
+- "Best comfort hotels in New York"
+- "Show me 3 hotels in London sorted by facilities"
+- "Hotels with cleanliness above 8.5 in Italy"
 
-⚠️ Ensure column names match exactly (case-insensitive check will normalize them).  
+## Architecture
 
----
+- **LangGraph**: Orchestrates the agent workflow with tool calling
+- **Streamlit**: Provides the chat interface
+- **Custom Tool**: Single `query_hotels` tool for dataset queries
+- **Data Management**: Normalized CSV loading with proper error handling
 
-## 🚀 Getting Started
+## Dataset Requirements
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/roshan5619/hotel-query-agent.git
-cd hotel-query-agent
-```
-2. Install dependencies
-
-We recommend using a virtual environment.
-```
-pip install -r requirements.txt
-```
-3. Set up environment variables
-
-Create a .env file in the project root:
-```
-OPENAI_API_KEY=your_openai_api_key_here
-
-```
-4. Prepare dataset
-
-Place hotels.csv in the project root.
-
-5. Run the app
-```
-streamlit run app.py
-```
+The CSV must contain these columns:
+- `hotel_id`: Unique identifier
+- `hotel_name`: Hotel name
+- `city`: City name
+- `country`: Country name
+- `lat`: Latitude
+- `lon`: Longitude
+- `star_rating`: Star rating (0-5)
+- `cleanliness_base`: Cleanliness score
+- `comfort_base`: Comfort score
+- `facilities_base`: Facilities score
